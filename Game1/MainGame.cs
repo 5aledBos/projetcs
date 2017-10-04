@@ -26,6 +26,9 @@ namespace Flappy
         private int _screenHeight;
 
         private float _time;
+        private float _timeOrigin;
+        private float _pos0;
+        private float _timeGap;
         private float _transitionSpeed;
         private float _acceleration;
         private float _speed;
@@ -56,8 +59,12 @@ namespace Flappy
             _screenWidth = Window.ClientBounds.Width;
             _screenHeight = Window.ClientBounds.Height;
             _speed0 = 0;
+            _jump = false;
             _position = new Vector2(50, 210);
             _prevPosition = _position;
+            _timeOrigin = 0.0f;
+            _time = 0.0f;
+            _pos0 = 0.0f;
             base.Initialize();
         }
 
@@ -94,17 +101,31 @@ namespace Flappy
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             _time += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            _acceleration = 5.0f;
-            _keyboardState = Keyboard.GetState();
-            _speed0 = (_position.Y - _prevPosition.Y) / 10 / (float)gameTime.ElapsedGameTime.TotalSeconds;
-            
-            if (_keyboardState.IsKeyDown(Keys.Space))
+            if (!_jump && (int)(_time*100)%5 == 0)
             {
-                _acceleration -= 10.0f; 
+                _bird = Content.Load<Texture2D>("bird1");
+                _jump = !_jump;
             }
-            
-            _position.Y += _acceleration * _time * _time / 2 + _speed * _time;
-            _speed0 =  (_position.Y - _prevPosition.Y) / 10 / (float)gameTime.ElapsedGameTime.TotalSeconds; 
+            else if ((int)(_time * 100)%5 == 0)
+            {
+                _bird = Content.Load<Texture2D>("bird2");
+                _jump = !_jump;
+            }
+                
+            _acceleration = -5.0f;
+            _keyboardState = Keyboard.GetState();
+            _speed0 = (float)(_position.Y - _prevPosition.Y);
+
+            if (_prevKeyboardState.IsKeyUp(Keys.Space) && _keyboardState.IsKeyDown(Keys.Space))
+            {
+                _timeOrigin = _time + 0.2f;
+                _timeGap = _time - _timeOrigin;
+                _pos0 = _position.Y - _timeGap * _timeGap * 800;
+                 
+            }
+            _timeGap = _time - _timeOrigin;
+
+            _position.Y = _timeGap * _timeGap * 800 + _pos0 ;
             _prevKeyboardState = _keyboardState;
 
             _prevPosition = _position;
