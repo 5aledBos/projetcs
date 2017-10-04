@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>arrowL.png</Source>
+      <Name>arrowL</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\arrowL.xnb</Output>
+      <Time>2017-10-03T16:55:18.0937271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>arrowLClicked.png</Source>
+      <Name>arrowLClicked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\arrowLClicked.xnb</Output>
+      <Time>2017-10-03T16:55:18.0957271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>arrowR.png</Source>
+      <Name>arrowR</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\arrowR.xnb</Output>
+      <Time>2017-10-03T16:55:18.0967271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>arrowRClicked.png</Source>
+      <Name>arrowRClicked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\arrowRClicked.xnb</Output>
+      <Time>2017-10-03T16:55:18.0987271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>b0.png</Source>
+      <Name>b0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\b0.xnb</Output>
+      <Time>2017-10-03T16:55:18.0997271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>b1.png</Source>
+      <Name>b1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\b1.xnb</Output>
+      <Time>2017-10-03T16:55:18.1007271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>b2.png</Source>
+      <Name>b2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\b2.xnb</Output>
+      <Time>2017-10-03T16:55:18.1017271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>b3.png</Source>
+      <Name>b3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\b3.xnb</Output>
+      <Time>2017-10-03T16:55:18.1037271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>background.png</Source>
+      <Name>background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2017-10-03T16:55:18.1047271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>background2.png</Source>
+      <Name>background2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\background2.xnb</Output>
+      <Time>2017-10-03T16:55:18.1057271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>balle.png</Source>
+      <Name>balle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\balle.xnb</Output>
+      <Time>2017-10-03T16:55:18.1067271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>bodyH.png</Source>
+      <Name>bodyH</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\bodyH.xnb</Output>
+      <Time>2017-10-03T16:55:18.1077271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>bodyV.png</Source>
+      <Name>bodyV</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\bodyV.xnb</Output>
+      <Time>2017-10-03T16:55:18.1097271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>border1.png</Source>
+      <Name>border1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\border1.xnb</Output>
+      <Time>2017-10-03T16:55:18.1107271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>border2.png</Source>
+      <Name>border2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\border2.xnb</Output>
+      <Time>2017-10-03T16:55:18.1127271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>border3.png</Source>
+      <Name>border3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\border3.xnb</Output>
+      <Time>2017-10-03T16:55:18.1137271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>boxH.png</Source>
+      <Name>boxH</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\boxH.xnb</Output>
+      <Time>2017-10-03T16:55:18.1157271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>boxV.png</Source>
+      <Name>boxV</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\boxV.xnb</Output>
+      <Time>2017-10-03T16:55:18.1167271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>c0.png</Source>
+      <Name>c0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\c0.xnb</Output>
+      <Time>2017-10-03T16:55:18.1177271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>c1.png</Source>
+      <Name>c1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\c1.xnb</Output>
+      <Time>2017-10-03T16:55:18.1197271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>cornerLD.png</Source>
+      <Name>cornerLD</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\cornerLD.xnb</Output>
+      <Time>2017-10-03T16:55:18.1657271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>cornerLU.png</Source>
+      <Name>cornerLU</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\cornerLU.xnb</Output>
+      <Time>2017-10-03T16:55:18.1697271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>cornerRD.png</Source>
+      <Name>cornerRD</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\cornerRD.xnb</Output>
+      <Time>2017-10-03T16:55:18.1727271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>cornerRU.png</Source>
+      <Name>cornerRU</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\cornerRU.xnb</Output>
+      <Time>2017-10-03T16:55:18.1757271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>easy.png</Source>
+      <Name>easy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\easy.xnb</Output>
+      <Time>2017-10-03T16:55:18.1797271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>food.png</Source>
+      <Name>food</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\food.xnb</Output>
+      <Time>2017-10-03T16:55:18.1827271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>GameOver.png</Source>
+      <Name>GameOver</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\GameOver.xnb</Output>
+      <Time>2017-10-03T16:55:18.1847271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>hard.png</Source>
+      <Name>hard</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\hard.xnb</Output>
+      <Time>2017-10-03T16:55:18.1887271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>headD.png</Source>
+      <Name>headD</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\headD.xnb</Output>
+      <Time>2017-10-03T16:55:18.1907271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>headL.png</Source>
+      <Name>headL</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\headL.xnb</Output>
+      <Time>2017-10-03T16:55:18.1937271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>headR.png</Source>
+      <Name>headR</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\headR.xnb</Output>
+      <Time>2017-10-03T16:55:18.1977271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>headU.png</Source>
+      <Name>headU</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\headU.xnb</Output>
+      <Time>2017-10-03T16:55:18.2007271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>medium.png</Source>
+      <Name>medium</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\medium.xnb</Output>
+      <Time>2017-10-03T16:55:18.2097271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>newGame.png</Source>
+      <Name>newGame</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\newGame.xnb</Output>
+      <Time>2017-10-03T16:55:18.2127271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>newGameClicked.png</Source>
+      <Name>newGameClicked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\newGameClicked.xnb</Output>
+      <Time>2017-10-03T16:55:18.2167271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>newGameSelected.png</Source>
+      <Name>newGameSelected</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\newGameSelected.xnb</Output>
+      <Time>2017-10-03T16:55:18.2197271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>tailD.png</Source>
+      <Name>tailD</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\tailD.xnb</Output>
+      <Time>2017-10-03T16:55:18.2327271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>tailL.png</Source>
+      <Name>tailL</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\tailL.xnb</Output>
+      <Time>2017-10-03T16:55:18.2367271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>tailR.png</Source>
+      <Name>tailR</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\tailR.xnb</Output>
+      <Time>2017-10-03T16:55:18.2397271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>tailU.png</Source>
+      <Name>tailU</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\tailU.xnb</Output>
+      <Time>2017-10-03T16:55:18.2427271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>MaPolice.spritefont</Source>
+      <Name>MaPolice</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\MaPolice.xnb</Output>
+      <Time>2017-10-03T16:55:18.2037271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Police.spritefont</Source>
+      <Name>Police</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\Police.xnb</Output>
+      <Time>2017-10-03T16:55:18.2227271+02:00</Time>
+    </Item>
+    <Item>
+      <Source>score.spritefont</Source>
+      <Name>score</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\score.xnb</Output>
+      <Time>2017-10-03T16:55:18.2277271+02:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\SnakeContent\</RootDirectory>
+      <LoggerRootDirectory>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\</LoggerRootDirectory>
+      <IntermediateDirectory>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\SnakeContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>c:\users\kbousrih\documents\visual studio 2010\Projects\Snake\Snake\Snake\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2017-09-21T11:37:04.972847+02:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
