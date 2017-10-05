@@ -316,7 +316,7 @@ namespace Snake
 
                 _speed++;
                 _speed = _speed % _speedFactor;
-                if (_snake.Count < _screenHeight * _screenWidth / (pas * pas))
+                if (_snake.Count < _screenHeight * _screenWidth / (pas * pas) + _box.getBorder().Count)
                 {
                     if (!isPaused && (_speed == 0))
                     {
@@ -436,13 +436,17 @@ namespace Snake
                             _snake[i].LoadContent(Content, "bodyH");
                     }
 
-                    if (_snake[_snake.Count - 1].Position == Vector2.Add(_snake[_snake.Count - 2].Position, new Vector2(pas, 0)))
+                    if (_snake[_snake.Count - 1].Position == Vector2.Add(_snake[_snake.Count - 2].Position, new Vector2(pas, 0))
+                        || (_snake[_snake.Count - 1].Position.X == 0 && _snake[_snake.Count - 2].Position == new Vector2(_screenWidth-pas,_snake[_snake.Count - 1].Position.Y)))
                         _snake[_snake.Count - 1].LoadContent(Content, "tailL");
-                    if (_snake[_snake.Count - 1].Position == Vector2.Add(_snake[_snake.Count - 2].Position, new Vector2(-pas, 0)))
+                    if (_snake[_snake.Count - 1].Position == Vector2.Add(_snake[_snake.Count - 2].Position, new Vector2(-pas, 0))
+                        || (_snake[_snake.Count - 1].Position.X == _screenWidth-pas && _snake[_snake.Count - 2].Position == new Vector2(0,_snake[_snake.Count - 1].Position.Y)))
                         _snake[_snake.Count - 1].LoadContent(Content, "tailR");
-                    if (_snake[_snake.Count - 1].Position == Vector2.Add(_snake[_snake.Count - 2].Position, new Vector2(0, pas)))
+                    if (_snake[_snake.Count - 1].Position == Vector2.Add(_snake[_snake.Count - 2].Position, new Vector2(0, pas))
+                        || (_snake[_snake.Count - 1].Position.Y == 0 && _snake[_snake.Count - 2].Position == new Vector2(_snake[_snake.Count - 1].Position.X,_screenHeight-pas)))
                         _snake[_snake.Count - 1].LoadContent(Content, "tailU");
-                    if (_snake[_snake.Count - 1].Position == Vector2.Add(_snake[_snake.Count - 2].Position, new Vector2(0, -pas)))
+                    if (_snake[_snake.Count - 1].Position == Vector2.Add(_snake[_snake.Count - 2].Position, new Vector2(0, -pas))
+                        || (_snake[_snake.Count - 1].Position.Y == _screenHeight - pas && _snake[_snake.Count - 2].Position == new Vector2(_snake[_snake.Count - 1].Position.X, 0)))
                         _snake[_snake.Count - 1].LoadContent(Content, "tailD");
 
 
