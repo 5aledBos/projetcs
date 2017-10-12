@@ -22,7 +22,10 @@ namespace Flappy
             set { _position = value; }
         }
         private Vector2 _position;
-
+        public string Asset
+        {
+            get { return _assetName; }
+        }
         public virtual void Initialize() { }
 
         private string _assetName;
