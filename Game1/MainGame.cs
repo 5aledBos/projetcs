@@ -21,6 +21,8 @@ namespace Flappy
         private Texture2D _obstacle2;
 
         private SpriteFont _font;
+        private SpriteFont _fontGameOver;
+        private SpriteFont _fontPlay;
 
         private KeyboardState _keyboardState;
         private KeyboardState _prevKeyboardState;
@@ -30,15 +32,19 @@ namespace Flappy
         private int _wing;
         private int _limiteSup;
         private int _limiteInf;
+        private int _score;
 
         private float _time;
         private float _timeOrigin;
         private float _pos0;
         private float _timeGap;
         private float _transitionSpeed;
+        private float _speed;
         private float _acceleration;
 
         private bool _jump;
+        private bool _gameOver;
+        private bool _isPaused;
 
         private Vector2 _position;
         private Vector2 _obstPos1;
@@ -78,6 +84,10 @@ namespace Flappy
             _acceleration = 800;
             _wing = 0;
             _transitionSpeed = 5;
+            _speed = 0.3f;
+            _score = 24;
+            _isPaused = true;
+            _gameOver = false;
             base.Initialize();
         }
 
@@ -89,6 +99,9 @@ namespace Flappy
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            _font = Content.Load<SpriteFont>("Score");
+            _fontGameOver = Content.Load<SpriteFont>("File");
+            _fontPlay = Content.Load<SpriteFont>("play");
             _bird = Content.Load<Texture2D>("bird1");
             _obstacle1 = Content.Load<Texture2D>("obstacle");
             _obstacle2 = Content.Load<Texture2D>("obstacle");
@@ -113,82 +126,107 @@ namespace Flappy
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            Random rnd = new Random();
-            _obstPos1.X -= _transitionSpeed;
-            _obstPos2.X -= _transitionSpeed;
-            if (_obstPos1.X < -100)
+            _keyboardState = Keyboard.GetState();
+            if (_keyboardState.IsKeyUp(Keys.P) && _prevKeyboardState.IsKeyDown(Keys.P))
             {
-                _obstPos1 = new Vector2 (_screenWidth, rnd.Next(_limiteSup, _limiteInf));
-            }
-            if (_obstPos2.X < -100)
-            {
-                _obstPos2 = new Vector2(_screenWidth, rnd.Next(_limiteSup, _limiteInf));
-            }
-
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-            
-            _time += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            if (_wing == 0)
-            {
-                if (_jump)
+                if (_gameOver)
+                    this.Initialize();
+                else
                 {
-                    _bird = Content.Load<Texture2D>("bird1");
-                    _jump = !_jump;
+                    _isPaused = !_isPaused;
+                }
+            }
+            if (_gameOver)
+            {
+                _position.Y += 20;
+            }else if (!_isPaused)
+            {
+                Random rnd = new Random();
+                _obstPos1.X -= _transitionSpeed;
+                _obstPos2.X -= _transitionSpeed;
+                if (_obstPos1.X < -100)
+                {
+                    _obstPos1 = new Vector2(_screenWidth, rnd.Next(_limiteSup, _limiteInf));
+                }
+                if (_obstPos2.X < -100)
+                {
+                    _obstPos2 = new Vector2(_screenWidth, rnd.Next(_limiteSup, _limiteInf));
+                }
+
+                if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+                    Exit();
+
+                _time += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (_wing == 0)
+                {
+                    if (_jump)
+                    {
+                        _bird = Content.Load<Texture2D>("bird1");
+                        _jump = !_jump;
+                    }
+                    else
+                    {
+                        _bird = Content.Load<Texture2D>("bird2");
+                        _jump = !_jump;
+                    }
+                }
+                _wing++;
+                _wing = _wing % 5;
+                //_acceleration = -5.0f;
+                
+                
+
+                if (_prevKeyboardState.IsKeyUp(Keys.Space) && _keyboardState.IsKeyDown(Keys.Space))
+                {
+                    _timeOrigin = _time + _speed;
+                    _timeGap = _time - _timeOrigin;
+                    _pos0 = _position.Y - _timeGap * _timeGap * _acceleration;
+
+
                 }
                 else
                 {
-                    _bird = Content.Load<Texture2D>("bird2");
-                    _jump = !_jump;
+                    _timeGap = _time - _timeOrigin;
+
                 }
-            }
-            _wing++;
-            _wing = _wing % 5;
-            //_acceleration = -5.0f;
-            _keyboardState = Keyboard.GetState();
-
-            
-
-            if (_prevKeyboardState.IsKeyUp(Keys.Space) && _keyboardState.IsKeyDown(Keys.Space))
-            {
-                _timeOrigin = _time + 0.3f;
-                _timeGap = _time - _timeOrigin;
-                _pos0 = _position.Y - _timeGap * _timeGap * _acceleration;
+                _transitionSpeed += 0.005f;
+                _acceleration += 0.5f;
                 
+                if (_obstPos1.X < 130 && _obstPos1.X > -70 || _position.Y < 0 || _position.Y > _screenHeight - 50)
+                {
+                    if (_position.Y < _obstPos1.Y + 608 || _position.Y > _obstPos1.Y + 738)
+                    {
+                        _timeGap = 0;
+                        _bird = Content.Load<Texture2D>("bird1");
+                        _pos0 = _position.Y;
+                        _transitionSpeed = 0;
+                        _gameOver = true;
+                    }
+                }
 
+                if (_obstPos2.X < 130 && _obstPos2.X > -70)
+                {
+                    if (_position.Y < _obstPos2.Y + 608 || _position.Y > _obstPos2.Y + 738)
+                    {
+                        _timeGap = 0;
+                        _bird = Content.Load<Texture2D>("bird1");
+                        _pos0 =_position.Y;
+                        _transitionSpeed = 0;
+                        _gameOver = true;
+                    }
+                }
+
+
+                if (_obstPos1.X + _transitionSpeed > -50 && _obstPos1.X < -50)
+                    _score++;
+                if (_obstPos2.X +_transitionSpeed > -50 && _obstPos2.X < -50)
+                    _score++;
+
+
+                _position.Y = _timeGap * _timeGap * _acceleration + _pos0;
+                // TODO: Add your update logic here
             }
-            else
-            {
-                _timeGap = _time - _timeOrigin;
-                
-            }
-            _transitionSpeed += 0.001f;
             _prevKeyboardState = _keyboardState;
-            if (_obstPos1.X <130 && _obstPos1.X>-70)
-            {
-                if (_position.Y < _obstPos1.Y + 608 || _position.Y > _obstPos1.Y + 738)
-                {
-                    _timeGap = 0;
-                    _wing--;
-                    _pos0 = _position.Y;
-                    _transitionSpeed = 0;
-                }
-            }
-
-            if (_obstPos2.X < 130 && _obstPos2.X > -70)
-            {
-                if (_position.Y < _obstPos2.Y + 608 || _position.Y > _obstPos2.Y + 738)
-                {
-                    _timeGap = 0;
-                    _bird = Content.Load<Texture2D>("bird1");
-                    _pos0 = _position.Y;
-                    _transitionSpeed = 0;
-                }
-            }
-
-            _position.Y = _timeGap * _timeGap * _acceleration + _pos0;
-            // TODO: Add your update logic here
-            
             base.Update(gameTime);
         }
 
@@ -203,6 +241,17 @@ namespace Flappy
             spriteBatch.Draw(_bird, _position);
             spriteBatch.Draw(_obstacle1, _obstPos1);
             spriteBatch.Draw(_obstacle2, _obstPos2);
+            if (_gameOver)
+            {
+                spriteBatch.DrawString(_fontGameOver, "Game Over", new Vector2((_screenWidth - _fontGameOver.MeasureString("Game Over").X) / 2, 50), Color.Black);
+                spriteBatch.DrawString(_font, "Score: " + _score.ToString(), new Vector2((_screenWidth - _font.MeasureString("Score: " + _score.ToString()).X) / 2, 200), Color.Black);
+
+            }
+            else if (_isPaused)
+                spriteBatch.DrawString(_fontPlay, "Press P to play", new Vector2((_screenWidth - _fontPlay.MeasureString("Press P to play").X) / 2, 50), Color.Black);
+            else
+                spriteBatch.DrawString(_font, "Score: " + _score.ToString(), new Vector2((_screenWidth - _font.MeasureString("Score: " + _score.ToString()).X) / 2, 50), Color.Black);
+
             // TODO: Add your drawing code here
             spriteBatch.End();
             base.Draw(gameTime);

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/khaled/Desktop/projetcs-master/Game1/Content/bird2.png</SourceFile>
-  <SourceTime>2017-10-04T08:54:22+02:00</SourceTime>
-  <DestFile>C:/Users/khaled/Desktop/projetcs-master/Game1/Content/bin/Windows/bird2.xnb</DestFile>
-  <DestTime>2017-10-04T20:53:01.680656+02:00</DestTime>
+  <SourceFile>C:/Users/khaled/Desktop/projetcs-master/Game1/Content/obstacle.png</SourceFile>
+  <SourceTime>2017-10-12T23:10:51.3995969+02:00</SourceTime>
+  <DestFile>C:/Users/khaled/Desktop/projetcs-master/Game1/Content/bin/Windows/obstacle.xnb</DestFile>
+  <DestTime>2017-10-12T23:11:02.041178+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
